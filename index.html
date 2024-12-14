@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz for Biology Students</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz for Biology Students</h1>
+    </header>
+
+    <section id="registration">
+        <h2>Register for the Quiz</h2>
+        <input type="text" id="studentName" placeholder="Enter your name">
+        <button onclick="register()">Start Quiz</button>
+    </section>
+
+    <section id="quiz" style="display:none;">
+        <div id="spin-wheel">
+            <button onclick="spinWheel()">Spin the Wheel</button>
+            <div id="wheel" class="wheel"></div>
+        </div>
+
+        <div id="question">
+            <h3 id="questionText">Question will appear here</h3>
+            <div id="options">
+                <!-- Options will be dynamically added here -->
+            </div>
+            <p>Time Left: <span id="timer">30</span> seconds</p>
+        </div>
+
+        <div id="result" style="display:none;">
+            <h3>Quiz Over</h3>
+            <p>Your Score: <span id="score"></span></p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode"></script>
+    <script src="script.js"></script>
+</body>
+</html>
